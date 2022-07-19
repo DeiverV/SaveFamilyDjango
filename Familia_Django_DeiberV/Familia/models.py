@@ -1,7 +1,6 @@
 from django.db import models
-from django.forms import CharField, DateField, IntegerField
 
 class Familiar(models.Model):
-    nombre = CharField(max_length=20)
-    edad = IntegerField()
-    cumpleanos = DateField()
+    nombre = models.CharField(max_length=30,null=True)
+    edad = models.IntegerField(default=0)
+    cumpleanos = models.DateField(default="2006-03-31")
