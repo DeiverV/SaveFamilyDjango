@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Familiares!! // Django!</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <section>
+        <div id="contenedorCentral">
+            <div id="tittleContenedor">
+                <h1>Esta es la info de tus familiares que tienes guardados!</h1>
+            </div>
+            <div id="contenedorBtns">
+                
+                {% for familiar in familiares %}
+                    <div  class="divBtn">
+                        <h2>familiar {{forloop.counter}}</h2>
+                        <p>
+                            <strong>Nombre:</strong> {{familiar.nombre}} <br>
+                            <strong>Edad:</strong> {{familiar.edad}} <br>
+                            <strong>Cumpleaños:</strong> {{familiar.cumpleanos}} <br>
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'js/basic.js' %}"></script>
+</body>
+</html>

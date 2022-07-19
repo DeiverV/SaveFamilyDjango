@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Mi primera app Django!</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <section>
+        <div id="contenedorCentral">
+            <div id="tittleContenedor">
+                <h1>¿Que deseas hacer en la app?</h1>
+            </div>
+            <div id="contenedorBtns">
+                <div  class="divBtn">
+                    <h2>Guardar un familiar</h2>
+                    <button id="createFamiliarBtnDiv"><img src="{% static 'img/addfamily.png' %}" alt="createfamily"></button>
+                </div>
+                <div  class="divBtn">
+                    <h2>Ver Familiares</h2>
+                    <form action="./familiares/" method="get">
+                        <button type="submit" id="seeComputers"><img src="{% static 'img/seefamiliares.png' %}" alt="seefamily"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="contenedorForm">
+            <button id="cerrarFormFamiliar">X</button>
+            <form action="./" method="post">
+                {% csrf_token %} 
+                {{  formFamiliares }}
+                <input type="submit" value="OK">
+            </form>
+        </div>
+    </section>
+    <script src="{% static 'js/basic.js' %}"></script>
+</body>
+</html>

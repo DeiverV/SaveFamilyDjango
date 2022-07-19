@@ -1,0 +1,101 @@
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #601f1f;
+    width: 100vw;
+    height: 100vh;
+}
+
+#contenedorCentral{
+    width: 70%;
+    height: 50%;
+    background-color: white;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#tittleContenedor{
+    width: 90%;
+    height: 20%;
+    font-size: 1.5em;
+    font-family: monospace;
+    text-align: center;
+    font-style: italic;
+}
+#contenedorBtns{
+    width: 90%;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.divBtn{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.divBtn img{
+    cursor: pointer;
+    width: 9vh;
+    object-fit: contain;
+
+}
+
+.divBtn button{
+    border: none;
+    background: none;
+    outline: none;
+}
+
+#contenedorForm{
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition: .3s;
+    z-index: 2;
+    position: absolute;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+#contenedorForm form{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#contenedorForm form input{
+    width: 80%;
+    height: 2em;
+    margin: 1em 0;
+    border-radius: 5px;
+    padding:   2px;
+}
+#contenedorForm form input:last-child{
+    width: 80%;
+    background-color: green;
+    color: white;
+    margin: 1em;
+}
